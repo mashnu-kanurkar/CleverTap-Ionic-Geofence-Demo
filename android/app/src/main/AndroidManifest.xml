@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name="com.clevertap.android.sdk.Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBarLaunch"
+            android:launchMode="singleTask"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+
+<!--        <meta-data-->
+<!--            android:name="CLEVERTAP_ACCOUNT_ID"-->
+<!--            android:value="RKR-99K-R46Z"-->
+<!--            tools:replace="android:value"/>-->
+<!--      -->
+<!--        <meta-data-->
+<!--            android:name="CLEVERTAP_TOKEN"-->
+<!--            android:value="3cc-232"-->
+<!--            tools:replace="android:value"/>-->
+
+      <meta-data
+        android:name="CLEVERTAP_ACCOUNT_ID"
+        android:value="675-449-5W7Z"
+        tools:replace="android:value"/>
+
+      <meta-data
+        android:name="CLEVERTAP_TOKEN"
+        android:value="c44-5a6"
+        tools:replace="android:value"/>
+
+      <meta-data
+        android:name="CLEVERTAP_REGION"
+        android:value="us1"
+        tools:replace="android:value"/>
+
+
+    </application>
+
+    <!-- Permissions -->
+
+    <!-- Required to allow the app to send events -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Recommended so that we can be smart about when to send the data -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+</manifest>
