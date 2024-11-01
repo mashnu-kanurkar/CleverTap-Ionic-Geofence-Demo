@@ -36,24 +36,14 @@
                 android:resource="@xml/file_paths"></meta-data>
         </provider>
 
-<!--        <meta-data-->
-<!--            android:name="CLEVERTAP_ACCOUNT_ID"-->
-<!--            android:value="RKR-99K-R46Z"-->
-<!--            tools:replace="android:value"/>-->
-<!--      -->
-<!--        <meta-data-->
-<!--            android:name="CLEVERTAP_TOKEN"-->
-<!--            android:value="3cc-232"-->
-<!--            tools:replace="android:value"/>-->
-
       <meta-data
         android:name="CLEVERTAP_ACCOUNT_ID"
-        android:value="675-449-5W7Z"
+        android:value="Account_id"
         tools:replace="android:value"/>
 
       <meta-data
         android:name="CLEVERTAP_TOKEN"
-        android:value="c44-5a6"
+        android:value="Account_token"
         tools:replace="android:value"/>
 
       <meta-data
